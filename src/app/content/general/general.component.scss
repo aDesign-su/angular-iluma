@@ -54,46 +54,69 @@ button:hover{
 .first_block{
     height: 738px;
     width: 100%;
-    background: #f2f1ed;
+    // background: #54bcb4;
+    background: rgb(66,183,174);
+    background: linear-gradient(90deg, rgba(66,183,174,1) 0%, rgba(66,183,174,1) 28%, rgba(84,188,180,1) 65%, rgba(84,188,180,1) 100%);
+    // background-image: url(https://iqos-terea-iluma.ru/wp-content/uploads/2024/02/IQOS_ILUMA-Prime_FirstSteps_CXXX_Hero_Video_Image_Variant3_ProductConsumables_Desktop_2x_CA-scaled.webp);
     margin-bottom: 100px;
     // background: linear-gradient(180deg, #FFFFFF 13.75%, rgba(245, 246, 250, 0.64854) 61.11%, rgba(245, 246, 250, 0) 100%), #FFFFFF;
+    .first_block_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 62.5%;
+        margin: 0 auto;
+        height: 100%;
+        .first_block_container_blocks{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .first_block_container_block{
+            width: 33.3%;
+            margin: 50px;
+        }
+        .first_block_container_name{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 139.9%;
+            text-transform: uppercase;
+            padding-top: 7vh;
+            color: #5A5A5A;
+            .wrapper {
+                // width: 300px;
+                height: 385px;
+                // border: 5px solid #515151;
+              }
+              .exmpl {
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                box-shadow: 0px 2px 20px 0px rgb(0 0 0 / 50%);
+                border-radius: 10px;
+              }
+              .exmpl img {
+                min-width: 100%;
+                min-height: 100%;
+                flex-shrink: 0;
+              }
+        }
+        .first_block_container_discrtiption{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 139.9%;
+            color: #6D6D6D;
+        }
+    }
 }
-.first_block_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 62.5%;
-    margin: 0 auto;
-    height: 100%;
-    
-}
-.first_block_container_blocks{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
 
-}
-.first_block_container_block{
-    width: 33.3%;
-    margin: 50px;
-}
-.first_block_container_name{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 139.9%;
-    text-transform: uppercase;
-    color: #5A5A5A;
-}
-.first_block_container_discrtiption{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 139.9%;
-    color: #6D6D6D;
-}
+
+
 .first_block_container_block_img{
     text-align: center;
 }
