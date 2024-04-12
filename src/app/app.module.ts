@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { FooterComponent } from './content/footer/footer.component';
+import { DetailsComponent } from './content/general/details/details.component';
 
 const appRoutes: Routes = [
   { path: '', component: GeneralComponent },
@@ -26,7 +28,9 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     GeneralComponent,
-    HeaderComponent
+    DetailsComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
