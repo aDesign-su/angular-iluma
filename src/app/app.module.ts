@@ -9,6 +9,8 @@ import { GeneralComponent } from './content/general/general.component';
 import { HeaderComponent } from './content/header/header.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 const appRoutes: Routes = [
   { path: '', component: GeneralComponent },
@@ -32,7 +34,9 @@ const appRoutes: Routes = [
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

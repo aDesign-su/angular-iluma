@@ -13,7 +13,7 @@
     margin-top: -28px;
 }
 a{
-    font-family: Montserrat;
+    font-family: "Play", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -21,38 +21,42 @@ a{
     text-align: right;
     text-transform: uppercase;
     text-decoration: none;
-    color: #5A5A5A;
+    color: #fff;
 }
 a:hover{
     color: #000000;
     border-bottom: 3px solid #F27A54 ;
     opacity: 1;
 }
-button{
-    background-image: linear-gradient(90deg, #F27A54 -21.05%, #A154F2 121.05%);
-    height: 56px;
-    max-width: 251.75px;
-    width: 100%;
-    border-radius: 30px;
-    text-align: center;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13.25px;
-    line-height: 16px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    border: 10px solid white;
+.button__block {
+    button{
+        background-image: linear-gradient(90deg, #54f2d0 -21.05%, #3f51b5 121.05%);
+        height: 56px;
+        max-width: 251.75px;
+        width: 100%;
+        border-radius: 30px;
+        text-align: center;
+        font-family: "Comfortaa", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13.25px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: 10px solid white;
+        transition: all .2s ease-out;
+        &:hover{
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
 }
-button:hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
+
 
 /* первый блок */
 .first_block{
-    height: 738px;
+    height: 850px;
     width: 100%;
     // background: #54bcb4;
     background: rgb(66,183,174);
@@ -77,7 +81,7 @@ button:hover{
             margin: 50px;
         }
         .first_block_container_name{
-            font-family: Montserrat;
+            font-family: "Play", sans-serif;
             font-style: normal;
             font-weight: 500;
             font-size: 32px;
@@ -110,7 +114,16 @@ button:hover{
             font-weight: normal;
             font-size: 20px;
             line-height: 139.9%;
-            color: #6D6D6D;
+            color: #fff;
+        }
+        .first_block_container_title{
+            font-family: "Play", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 139.9%;
+            color: #3f51b5;
         }
     }
 }
@@ -148,7 +161,7 @@ button:hover{
 .second_block{
     width: 100%;
     height: 738px;
-    background: #f2f1ed;
+    background: #3e5a68;
     margin-bottom: 100px;
 }
 .second_block_cont{
@@ -170,6 +183,23 @@ button:hover{
 }
 .second_block_content_text{
     display: flex;
+    .wrapper {
+        width: 1300px;
+        height: 490px;
+        // border: 5px solid #515151;
+      }
+      .exmpl {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0px 2px 20px 0px rgb(0 0 0 / 50%);
+        border-radius: 10px;
+      }
+      .exmpl img {
+        min-width: 100%;
+        min-height: 100%;
+        flex-shrink: 0;
+      }
 }
 .second_block_footer{
     margin: 0 auto;
@@ -181,21 +211,22 @@ button:hover{
     color: #6D6D6D;
 }
 .second_block_name, .third_block_container_name{
-    font-family: Montserrat;
+    font-family: "Play", sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
+    font-weight: bold;
+    font-size: 50px;
     line-height: 139.9%;
     text-transform: uppercase;
-    color: #5A5A5A;
+    color: #fff;
 }
 .second_block_content_text_name{
-    font-family: Montserrat;
+    font-family: "Comfortaa", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 120%;
-    color: #6D6D6D;
+    padding-bottom: 25px;
+    color: #fff;
 }
 .second_block_content_text_discr{
     font-family: Montserrat;
@@ -206,15 +237,34 @@ button:hover{
     color: #6D6D6D;
 }
 .second_block_content_text_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
     margin-left: 40px;
 }
 /* третий блок */
-
+.mat-card {
+    width: 300px;
+    height: 750px;
+    .mat-card-actions {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 25px;
+        width: 95%;
+    }
+    .mat-card-content {
+        text-align: center;
+    }
+    .button-action {
+        width: 100%;
+    }
+}
 .third_block{
     width: 100%;
-    height: 738px;
-    background: #FFFFFF;
-    margin-bottom: 100px;
+    height: auto;
+    background: #95cfd9;
+    margin-bottom: 0px;
 }
 .third_block_container{
     display: flex;
@@ -229,15 +279,25 @@ button:hover{
     justify-content: space-around;
     flex-grow: 1;
 }
+.text-content {
+    font-family: "Comfortaa", sans-serif;
+    color: #18222f;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
 .third_block_container_content_left_img{
     display: flex;
     justify-content: space-between;
 }
 .third_block_container_content_left_discr{
+    display: flex;
+    justify-content: space-between;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     line-height: 139.9%;
     color: #6D6D6D;
 }
@@ -253,7 +313,26 @@ button:hover{
 footer{
     width: 100%;
     height: 300px;
-    background: #FFFFFF;
+    background: #18222f;
+}
+.footer_container_logo {
+    .wrapper {
+        height: 70px;
+        width: 70px;
+        // border: 5px solid #515151;
+      }
+      .exmpl {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0px 2px 20px 0px rgb(0 0 0 / 50%);
+        border-radius: 100px;
+      }
+      .exmpl img {
+        min-width: 100%;
+        min-height: 100%;
+        flex-shrink: 0;
+      }
 }
 .footer_container{
     display: flex;
@@ -280,12 +359,19 @@ footer{
 .contacts{
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #fff;
+    font-family: "Play", sans-serif;
+    .number_img {
+        padding-right: 15px;
+    }
 }
 .number, .web_site{
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    margin-left: 20px;
+    // margin-left: 20px;
 }
 .footer_container_menu_ul_li{
     margin-top: 10px;

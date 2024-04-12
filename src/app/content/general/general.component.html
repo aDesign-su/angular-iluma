@@ -8,8 +8,13 @@
                     <img src="../../../assets/620_2X.jpeg">
                 </div>
             </div>
-            <div class="first_block_container_discrtiption">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <div>
+                <div class="first_block_container_title">
+                    {{ title }}
+                </div>
+                <div class="first_block_container_discrtiption">
+                    {{ discrtiption }}
+                </div>
             </div>
             <div class="first_block_container_blocks">
                 <!-- первый блок -->
@@ -51,7 +56,8 @@
             </div>  
         </div>
         <div class="button__block">
-            <button>Оставить заявку</button>
+            <button mat-button>Каталог продукции</button>
+            <!-- <button>Каталог продукции</button> -->
         </div>
     </div>
 
@@ -60,49 +66,55 @@
     <div class="second_block">
         <div class="second_block_cont">
             <div class="second_block_name">
-                информация о курсах
+                О нас
             </div>
             <div class="second_block_content">
-                <div class="second_block_content_left">
+                <!-- <div class="second_block_content_left">
                     <img id="second_block_image" src="src/ttt.png" alt="image">
-                </div>
+                </div> -->
                 <div class="second_block_content_right">
                     
                     <!-- цифра 1 -->
     
                      <div class="second_block_content_text">
-                        <div class="second_block_content_text_image">
-                            <img id = "number_color1" src="src/2.png" alt="image">
-                        </div>    
+                        <div class="wrapper exmpl">
+                            <img src="../../../assets/520_1Z.jpg">
+                        </div>
+                        <!-- <div class="second_block_content_text_image">
+                            <img id = "number_color1" src="../../../assets/520_1Z.jpg" alt="image">
+                        </div>     -->
                         <div class="second_block_content_text_container">
                             <div class="second_block_content_text_name">
-                                Разнообразие
+                                {{ aboutParagraph1 }}
                             </div>
-                            <div class="second_block_content_text_discr">
+                            <div class="second_block_content_text_name">
+                                {{ aboutParagraph2 }}
+                            </div>
+                            <!-- <div class="second_block_content_text_discr">
                                 Вы можете выбрать любой наш курс. Что самое приятное, при продлении подписки вы можете сменить его! А если хочется остаться на старом - мы заменим вам 2 блюда в рационе на новые! Скоро будем выпускать новые курсы и планы питания. С нами не соскучишься! ;)
-                            </div>
+                            </div> -->
                         </div>    
                     </div>
     
                     <!-- цифра 2 -->
     
-                    <div class="second_block_content_text">
+                    <!-- <div class="second_block_content_text">
                         <div class="second_block_content_text_image">
                             <img id = "number_color1" src="src/2.png" alt="image">
                         </div> 
                         <div class="second_block_content_text_container">
                             <div class="second_block_content_text_name">
-                                Сервис
+                                {{ aboutParagraph2 }}
                             </div>
                             <div class="second_block_content_text_discr">
                                 Чат с диетологом, чат с тренером и общий чат с психологом - в вашем полном распоряжении. Наши эксперты всегда готовы прийти на помощь!
                             </div>
                         </div>
-                    </div>
+                    </div> -->
     
                     <!-- цифра 3 -->
     
-                    <div class="second_block_content_text">
+                    <!-- <div class="second_block_content_text">
                         <div class="second_block_content_text_image">
                             <img id = "number_color1" src="src/2.png" alt="image">
                         </div> 
@@ -114,15 +126,15 @@
                                 Мы предоставляем полноценные, отработанные инструменты, которые помогут каждой! Мы не считаем, что нужно делить наших участниц на VIP и не VIP персон
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="second_block_footer">
+            <!-- <div class="second_block_footer">
                 Рады приветствовать тебя в семье FIT GO!
-            </div>
+            </div> -->
         </div>
         <div class="button__block">
-            <button>Оставить заявку</button>
+            <button mat-button>Подробнее</button>
         </div>
     </div>
 
@@ -132,15 +144,37 @@
         <div class="third_block_container">
             <div class="third__block__container">
                 <div class="third_block_container_name">
-                    Питание и упражнения
+                    Наш ассортимент
                 </div>
                 <div class="third_block_container_content_left_discr">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                    <div *ngFor="let item of assort">
+
+                        <mat-card class="mat-card">
+                            <mat-card-header>
+                              <div mat-card-avatar class="example-header-image"></div>
+                              <mat-card-title>{{ item.name }}</mat-card-title>
+                            </mat-card-header>
+                            <img mat-card-image src="{{ item.img }}" alt="Photo of a Shiba Inu">
+                            <mat-card-content>
+                              <p>
+                                {{ item.discrtiption }}
+                              </p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                              <button mat-stroked-button class="button-action">Подробнее</button>
+                            </mat-card-actions>
+                          </mat-card>
+
+                    </div>
                 </div>
                 <div class="third_block_container_content">
                     <div class="third_block_container_content_left">
-                        
-                        <div class="third_block_container_content_left_img">
+                        <div class="text-content">
+                            <p>{{ info }}</p>
+                            <p>{{ subInfo }}</p>
+                        </div>
+                        <!-- <div class="third_block_container_content_left_img">
 
                             <div class="fourth_block_content_left_images_one">
                                 <div class="fourth_block_content_left_images_one_img">  
@@ -170,19 +204,19 @@
                                 <div class="fourth_block_content_left_images_name" >Ужин</div>
                             </div>
                                 
-                        </div>
+                        </div> -->
                     </div>
     
                 </div>
             </div>
-            <div class="third_block_container_content_rigth">
+            <!-- <div class="third_block_container_content_rigth">
                 <img id = "rigth_image" src="src/3663_1.png" alt="image">
-            </div>
+            </div> -->
             
         </div>
-        <div class="button__block">
+        <!-- <div class="button__block">
             <button>Оставить заявку</button>
-        </div>
+        </div> -->
     </div>
 
     <!-- футер -->
@@ -190,37 +224,46 @@
     <footer>
         <div class="footer_container">
             <div class="footer_container_logo">
-                <img id = "header_container_logo_img" src="src/FitGo.png" alt="image">
+                <div class="wrapper exmpl">
+                    <img id = "header_container_logo_img" src="../../../assets/logo.jpeg" alt="image">
+                </div>
             </div>
             <div class="footer_container_center_nemu">
                 <ul class="header_container_right_menu_ul">
-                    <li class="footer_container_menu_ul_li"><a href="#">курсы</a></li>
-                    <li class="footer_container_menu_ul_li"><a href="#">наши отличия</a></li>
-                    <li class="footer_container_menu_ul_li"><a href="#">питание и упражнения</a></li>
-                    <li class="footer_container_menu_ul_li"><a href="#">видео о нас</a></li>
-                    <li class="footer_container_menu_ul_li"><a href="#">эксперты</a></li>
+                    <li class="footer_container_menu_ul_li"><a href="#">Стики</a></li>
+                    <li class="footer_container_menu_ul_li"><a href="#">Устройства</a></li>
+                    <li class="footer_container_menu_ul_li"><a href="#">Главная</a></li>
+                    <li class="footer_container_menu_ul_li"><a href="#">Контакты</a></li>
+                    <li class="footer_container_menu_ul_li"><a href="#">О нас</a></li>
                 </ul>
             </div>
             <div class="footer_container_right_menu">
                 <div class="button_block">
-                    <button>Оставить заявку</button>
+                    <button mat-raised-button>Заказать</button>
                 </div>
                 <div class="contacts">
                     <div class="number">
                         <div class="number_img">
-                            <img src="src/Vector.png" alt="image">
+                            <mat-icon>perm_identity</mat-icon>
+                            <!-- <img src="src/Vector.png" alt="image"> -->
                         </div>
                         <div class="number_number">
-                            +7 (800) 555 - 35 - 35
+                            Менеджер: @Alena_ilumastoreRUS
                         </div>
                     </div>
                     <div class="web_site">
-                        <div class="number_img">
+                        <!-- <div class="number_img">
                             <img src="src/Vector_(1).png" alt="image">
-                        </div>
-                        <div class="number_number">
-                            fitgo.ru
-                        </div>
+                        </div> -->
+                    
+                            <div class="number_img">
+                                <mat-icon>currency_exchange</mat-icon>
+                                <!-- <img src="src/Vector.png" alt="image"> -->
+                            </div>
+                            <div class="number_number">
+                                Продажа Iqos Iluma(One, Standart,Prime), а также стиков "Terea".
+                            </div>
+                     
                     </div>
                 </div>
             </div>
